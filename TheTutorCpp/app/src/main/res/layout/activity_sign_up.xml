@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SignUpActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="20dp"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:id="@+id/Signup_LinearLayout_TOP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/Signup_ImageButton_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FF0000"
+            android:contentDescription="@string/SignUp_title"
+            app:srcCompat="@drawable/backbutton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nanumsquareb"
+            android:text="@string/SignUp_title"
+            android:textColor="#000000"
+            android:textSize="28dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Signup_TextView_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/SignUp_email"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Signup_LinearLayout_TOP"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/Signup_EditText_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/arial"
+        android:maxLines="1"
+        android:nextFocusDown="@id/Signup_EditText_password1"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/Signup_TextView_email"
+        tools:ignore="Autofill,LabelFor,SpUsage,TextFields" />
+
+    <TextView
+        android:id="@+id/Signup_TextView_alert1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/SignUp_alert1"
+        android:textColor="#E50000"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/Signup_EditText_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Signup_TextView_email"
+        app:layout_constraintTop_toBottomOf="@id/Signup_LinearLayout_TOP"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/Signup_TextView_password1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/SignUp_password1"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Signup_EditText_email"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/Signup_EditText_password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:fontFamily="@font/arial"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:nextFocusDown="@id/Signup_EditText_password2"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/Signup_TextView_password1"
+        tools:ignore="Autofill,LabelFor,SpUsage,TextFields" />
+
+    <TextView
+        android:id="@+id/Signup_TextView_alert2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/SignUp_alert2"
+        android:textColor="#E50000"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/Signup_EditText_password1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Signup_TextView_password1"
+        app:layout_constraintTop_toBottomOf="@id/Signup_EditText_email"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/Signup_TextView_password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/SignUp_password2"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Signup_EditText_password1"
+        tools:ignore="Autofill,LabelFor,SpUsage,TextFields" />
+
+    <EditText
+        android:id="@+id/Signup_EditText_password2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:fontFamily="@font/arial"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:nextFocusDown="@id/Signup_EditText_name"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/Signup_TextView_password2"
+        tools:ignore="Autofill,LabelFor,SpUsage,TextFields" />
+
+    <TextView
+        android:id="@+id/Signup_TextView_alert3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/SignUp_alert3"
+        android:textColor="#E50000"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/Signup_EditText_password2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Signup_TextView_password2"
+        app:layout_constraintTop_toBottomOf="@id/Signup_EditText_password1"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/Signup_TextView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/SignUp_name"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Signup_EditText_password2"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/Signup_EditText_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/arial"
+        android:maxLines="1"
+        android:nextFocusDown="@id/Signup_Button_done"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/Signup_TextView_name"
+        tools:ignore="Autofill,LabelFor,SpUsage,TextFields" />
+
+    <Button
+        android:id="@+id/Signup_Button_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="#00FF0000"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/SignUp_privacy"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@id/Signup_Button_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/Signup_Button_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/basic_button_unclick"
+        android:clickable="false"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/SignUp_send"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/Signup_TextView_bigAlert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/SignUp_text4"
+        android:textAlignment="center"
+        android:textColor="#E50000"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/Signup_Button_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

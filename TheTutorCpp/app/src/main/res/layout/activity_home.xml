@@ -1,0 +1,2397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main_LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/Main_LinearLayout_TOP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="40dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Main_TextView_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareeb"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            tools:ignore="SpUsage" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/Main_TextView_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:fontFamily="@font/nanumsquareeb"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <!-- D DAY LAYOUT-->
+    <LinearLayout
+        android:id="@+id/Main_LinearLayout_TOP2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Main_LinearLayout_TOP">
+
+        <TextView
+            android:id="@+id/Main_TextView_dday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nanumsquarer"
+            android:onClick="onTextViewClicked"
+            android:text="@string/Main_Dday"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            tools:ignore="SpUsage" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/Main_TextView_Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:focusable="true"
+            android:fontFamily="@font/nanumsquarer"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <!-- TIME TABLE AND TO DO -->
+    <LinearLayout
+        android:onClick="onTimeTableClicked"
+        android:id="@+id/Main_LinearLayout_CENTER1"
+        android:layout_width="0dp"
+        android:clickable="true"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical"
+        android:weightSum="27"
+        app:layout_constraintBottom_toTopOf="@id/Main_LinearLayout_BOTTOM"
+        app:layout_constraintEnd_toStartOf="@id/Main_LinearLayout_CENTER2"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Main_LinearLayout_TOP2">
+
+        <TextView
+            android:id="@+id/Main_TimeTableTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table_top"
+            android:fontFamily="@font/nanumsquareb"
+            android:gravity="center"
+            android:text="@string/Home_TIMETABLE"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_5"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_5_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_5_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_5_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_5_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_5_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_5_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_6"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_6_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_6_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_6_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_6_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_6_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_6_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_7"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_7_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_7_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_7_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_7_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_7_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_7_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_8"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_8_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_8_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_8_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_8_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_8_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_8_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_9"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_9_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_9_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_9_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_9_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_9_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_9_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_10"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_10_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_10_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_10_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_10_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_10_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_10_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_11"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_11_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_11_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_11_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_11_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_11_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_11_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_12"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_12_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_12_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_12_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_12_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_12_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_12_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_13_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_13_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_13_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_13_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_13_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                tools:ignore="TooManyViews" />
+
+            <View
+                android:id="@+id/Home_13_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_2"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_14_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_14_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_14_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_14_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_14_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_14_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_3"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_15_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_15_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_15_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_15_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_15_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_15_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_4"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_16_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_16_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_16_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_16_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_16_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_16_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_5"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_17_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_17_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_17_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_17_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_17_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_17_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_6"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_18_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_18_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_18_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_18_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_18_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_18_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_7"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_19_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_19_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_19_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_19_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_19_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_19_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_8"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_20_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_20_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_20_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_20_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_20_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_20_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_9"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_21_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_21_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_21_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_21_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_21_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_21_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_10"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_22_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_22_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_22_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_22_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_22_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_22_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_11"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_23_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_23_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_23_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_23_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_23_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_23_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_12"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_24_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_24_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_24_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_24_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_24_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_24_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_1_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_1_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_1_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_1_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_1_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_1_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_2"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_2_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_2_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_2_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_2_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_2_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_2_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_3"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_3_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_3_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_3_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_3_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_3_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_3_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table"
+                android:fontFamily="@font/nanumsquarer"
+                android:gravity="center"
+                android:text="@string/_4"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <View
+                android:id="@+id/Home_4_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_4_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_4_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_4_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_4_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+            <View
+                android:id="@+id/Home_4_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/table" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Home_TimeTable_Bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/table_bottom" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Main_LinearLayout_CENTER2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:weightSum="27"
+        app:layout_constraintBottom_toTopOf="@id/Main_LinearLayout_BOTTOM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintStart_toEndOf="@id/Main_LinearLayout_CENTER1"
+        app:layout_constraintTop_toBottomOf="@id/Main_LinearLayout_TOP2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table_top"
+            android:fontFamily="@font/nanumsquareb"
+            android:gravity="center"
+            android:text="@string/Home_TODO"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view7"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view8"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view9"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view10"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view11"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/table"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/Home_TODO_view12"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Home_TODO_TextView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumsquarer"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                tools:ignore="NestedWeights,SpUsage" />
+
+            <CheckBox
+                android:id="@+id/Home_TODO_Checkbox12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Home_Todo_Bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/table_bottom" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Main_LinearLayout_Alarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Main_LinearLayout_BOTTOM"
+        app:layout_constraintTop_toBottomOf="@id/Main_LinearLayout_CENTER2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquarer"
+            android:text="@string/Home_diagnosis1"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquarer"
+            android:text="@string/Home_diagnosis2"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/downarrow"
+            android:contentDescription="@string/Home_diagnosis_arrow" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Main_LinearLayout_BOTTOM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="120dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Main_LinearLayout_FAB"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/Main_Button_recommend1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/basic_button"
+                android:fontFamily="@font/nanumsquareb"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:stateListAnimator="@null"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <Button
+                android:id="@+id/Main_Button_recommend2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/basic_button"
+                android:fontFamily="@font/nanumsquareb"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:stateListAnimator="@null"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <Button
+                android:id="@+id/Main_Button_seeMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/basic_button_gray"
+                android:fontFamily="@font/nanumsquareb"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:stateListAnimator="@null"
+                android:text="@string/Home_seeMore"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:id="@+id/Main_blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:onClick="onBlurClicked"
+        android:visibility="invisible"
+        app:realtimeBlurRadius="20dp"
+        app:realtimeOverlayColor="#90FFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/Main_LinearLayout_FAB"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/FAB_study"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_button_white"
+            android:contentDescription="@string/Main_study"
+            android:elevation="6dp"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/timetable" />
+
+        <TextView
+            android:id="@+id/FABTV_study"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/nanumsquarer"
+            android:text="@string/Main_study"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            tools:ignore="SpUsage" />
+
+        <ImageButton
+            android:id="@+id/FAB_todo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_button_white"
+            android:contentDescription="@string/Home_todo"
+            android:elevation="6dp"
+            android:padding="17dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/todo" />
+
+        <TextView
+            android:id="@+id/FABTV_todo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/nanumsquarer"
+            android:text="@string/Home_todo"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            tools:ignore="SpUsage" />
+
+        <ImageButton
+            android:id="@+id/FAB_diagnosis"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_button_white"
+            android:contentDescription="@string/Main_Diagnosis"
+            android:elevation="6dp"
+            android:padding="14dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/study" />
+
+        <TextView
+            android:id="@+id/FABTV_diagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/nanumsquarer"
+            android:text="@string/Main_Diagnosis"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            tools:ignore="SpUsage" />
+
+        <ImageButton
+            android:id="@+id/FAB_setting"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_button_white"
+            android:contentDescription="@string/Main_setting"
+            android:elevation="6dp"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/setting" />
+
+        <TextView
+            android:id="@+id/FABTV_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/nanumsquarer"
+            android:text="@string/Main_setting"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            tools:ignore="SpUsage" />
+
+        <ImageButton
+            android:id="@+id/FAB_main"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_button_black"
+            android:contentDescription="@string/Main_fab"
+            android:padding="14dp"
+            android:scaleType="centerCrop"
+            android:stateListAnimator="@null"
+            app:srcCompat="@drawable/s_icon" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

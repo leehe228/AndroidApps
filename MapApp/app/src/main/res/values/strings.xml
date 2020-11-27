@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="Home_Title">길찾기</string>
+    <string name="Home_departure">출발</string>
+    <string name="Home_arrival">도착</string>
+    <string name="Home_edit">편집</string>
+    <string name="Home_myPlace">내 장소</string>
+    <string name="Home_recent">최근 검색</string>
+    <string name="Home_deleteRecent">지우기</string>
+    <string name="Search_title">검색 결과</string>
+    <string name="Search_text1">길게 눌러 역 선택 선택</string>
+    <string name="Home_userButton">Home_UserButton</string>
+    <string name="Home_downarrow">Home_DownArrow</string>
+    <string name="Search_warning1">검색된 내용이 없습니다</string>
+</resources>

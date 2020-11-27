@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TodayActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="20dp"
+    tools:context=".TodayActivity">
+
+    <LinearLayout
+        android:id="@+id/Today_LinearLayout_TOP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Today_TextView_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareb"
+            android:textColor="#000000"
+            android:textSize="28dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Today_TextView_numSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Today_numTask"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/Today_ScrollView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Today_TextView_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="이름을 터치해 중요도를 표시하세요"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/Today_ScrollView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/Today_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/Today_TextView_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Today_LinearLayout_TOP">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_0"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub0" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub0Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub0"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub1" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub1Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub2" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub2Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub3" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub3Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub4" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub4Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub4"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub5" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub5Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub5"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_6"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub6" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub6Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub6"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_7"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub7" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub7Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub7"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_8"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub8" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub8Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub8"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_9"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub9" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub9Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub9"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_10"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub9" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub10Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub10"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Today_LinearLayout_sub11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <View
+                    android:id="@+id/Today_ColorView_11"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/sub9" />
+
+                <TextView
+                    android:id="@+id/Today_TextView_sub11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:onClick="onSub11Clicked"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageButton
+                    android:id="@+id/Today_closeButton_sub11"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="@string/Today_imgDes"
+                    app:srcCompat="@drawable/closebutton" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/Today_TextView_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Today_text1"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/Today_LinearLayout_sub"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpUsage" />
+
+    <LinearLayout
+        android:id="@+id/Today_LinearLayout_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/Today_EditText_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/Today_ColorView_main"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/sub1" />
+
+        <Spinner
+            android:id="@+id/Today_Spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/Today_EditText_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/arial"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:nextFocusDown="@id/Today_Button_add"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@id/Today_Button_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,LabelFor,SpUsage,TextFields" />
+
+    <Button
+        android:id="@+id/Today_Button_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/basic_button_unclick"
+        android:enabled="false"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/Today_add"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@id/Today_Button_done"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/Today_Button_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/basic_button_unclick"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/Today_save"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

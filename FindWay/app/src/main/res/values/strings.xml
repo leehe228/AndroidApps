@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">이러다 놓치것슈</string>
+    <string name="title_activity_maps">이러다 놓치것슈</string>
+
+    <!-- Home Activity -->
+    <string name="Home_arrival">도착</string>
+    <string name="Home_departure">출발</string>
+    <string name="Home_hint1">눌러서 검색</string>
+    <string name="Home_myPlace">최근 검색</string>
+    <string name="Home_change">변경</string>
+    <string name="Home_title">길찾기</string>
+    <string name="Home_nearPlace">내 주변(1km 내)</string>
+    <string name="Home_info1">길게 눌러 선택하세요</string>
+    <string name="Home_warn1">검색 결과가 없습니다</string>
+
+    <!-- Search Activity -->
+    <string name="Search_warn1">검색어를 입력하세요</string>
+    <string name="Search_info1">*서울특별시 1~9호선만 지원합니다</string>
+
+    <!-- Filter -->
+    <string name="KoNumEngFilter">^[a–zA–Z0–9가-힣ㄱ-ㅎㅏ-ㅣ\\u318D\\u119E\\u11A2\\u2022\\u2025\\u00b7\\uFE55]+$</string>
+    <string name="KoFilter">^[가-힣ㄱ-ㅎㅏ-ㅣ\\u318D\\u119E\\u11A2\\u2022\\u2025\\u00b7\\uFE55]+$</string>
+    <string name="Information_slash">/</string>
+    <string name="User_title">설정</string>
+
+</resources>

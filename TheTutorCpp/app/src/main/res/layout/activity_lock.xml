@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LockActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="20dp"
+    tools:context=".LockActivity">
+
+    <LinearLayout
+        android:id="@+id/Lock_LinearLayout_CENTER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/Lock_View_1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/lock_notinserted" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/Lock_View_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/lock_notinserted" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/Lock_View_3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/lock_notinserted" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/Lock_View_4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/lock_notinserted" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/Lock_Button_changePIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Lock_LinearLayout_CENTER">
+
+        <LinearLayout
+            android:id="@+id/Lock_LinearLayout_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Lock_Button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_1"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/Lock_Button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_2"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/Lock_Button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_3"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Lock_LinearLayout_num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Lock_Button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_4"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/Lock_Button_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_5"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/Lock_Button_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_6"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Lock_LinearLayout_num3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Lock_Button_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_7"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/Lock_Button_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_8"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/Lock_Button_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_9"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Lock_LinearLayout_num4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Lock_Button_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_clear"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/Lock_Button_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_0"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/Lock_Button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_backSpace"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Lock_TextView_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Lock_wrong"
+        android:textAlignment="center"
+        android:textColor="#E50000"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/Lock_LinearLayout_CENTER"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/Lock_Button_changePIN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/basic_button_gray"
+        android:clickable="false"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/Lock_button"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

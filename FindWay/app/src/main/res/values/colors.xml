@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#272727</color>
+    <color name="colorAccent">#2196F3</color>
+
+    <color name="black">#000000</color>
+    <color name="semiBlack">#505050</color>
+
+    <color name="backgroundColor">#F6F6F6</color>
+
+    <!-- 혼잡도 색 -->
+    <color name="level0">#DFDFDF</color>
+    <color name="level1">#DE6E6E</color>
+    <color name="level2">#E8B481</color>
+    <color name="level3">#E8DE85</color>
+    <color name="level4">#84E494</color>
+    <color name="level5">#6EBFDE</color>
+
+    <!-- 노선별 색 -->
+    <color name="line1">#0D347F</color>
+    <color name="line2">#3B9F37</color>
+    <color name="line3">#DC5C32</color>
+    <color name="line4">#2F66A9</color>
+    <color name="line5">#713E8D</color>
+    <color name="line6">#8F4E24</color>
+    <color name="line7">#5B692E</color>
+    <color name="line8">#C91C63</color>
+    <color name="line9">#B49628</color>
+
+</resources>

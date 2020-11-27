@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SetLockActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="20dp"
+    tools:context=".SetLockActivity">
+
+    <LinearLayout
+        android:id="@+id/SetLock_LinearLayout_TOP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/SetLock_ImageButton_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FF0000"
+            android:contentDescription="@string/SetLock_title"
+            app:srcCompat="@drawable/backbutton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nanumsquareb"
+            android:text="@string/SetLock_title"
+            android:textColor="#000000"
+            android:textSize="28dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SetLock_LinearLayout_CENTER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/SetLock_Button_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/SetLock_View_1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/lock_notinserted" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/SetLock_View_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/lock_notinserted" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/SetLock_View_3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/lock_notinserted" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/SetLock_View_4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/lock_notinserted" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SetLock_LinearLayout_numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/SetLock_Button_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SetLock_LinearLayout_CENTER">
+
+        <LinearLayout
+            android:id="@+id/SetLock_LinearLayout_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/SetLock_Button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_1"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/SetLock_Button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_2"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/SetLock_Button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_3"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SetLock_LinearLayout_num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/SetLock_Button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_4"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/SetLock_Button_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_5"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/SetLock_Button_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_6"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SetLock_LinearLayout_num3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/SetLock_Button_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_7"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/SetLock_Button_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_8"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/SetLock_Button_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_9"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SetLock_LinearLayout_num4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/SetLock_Button_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_clear"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/SetLock_Button_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_0"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:id="@+id/SetLock_Button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:fontFamily="@font/nanumsquarer"
+                android:text="@string/Lock_backSpace"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/SetLock_Button_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/basic_button"
+        android:clickable="false"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/SetLock_unlock"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@id/SetLock_Button_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/SetLock_Button_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/basic_button_unclick"
+        android:clickable="false"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/SetLock_save"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

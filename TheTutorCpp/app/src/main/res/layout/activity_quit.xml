@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/QuitActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".QuitActivity">
+
+    <LinearLayout
+        android:id="@+id/Quit_LinearLayout_TOP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/Quit_ImageButton_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FF0000"
+            android:contentDescription="@string/Quit_title"
+            app:srcCompat="@drawable/backbutton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nanumsquareb"
+            android:text="@string/Quit_title"
+            android:textColor="#000000"
+            android:textSize="28dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Quit_TextView_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Quit_text1"
+        android:textColor="#E50000"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/Quit_LinearLayout_TOP"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/Quit_TextView_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Quit_text2"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/Quit_TextView_text1"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/Quit_EditText_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/arial"
+        android:nextFocusDown="@id/Quit_EditText_password"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/Quit_TextView_text2"
+        tools:ignore="Autofill,LabelFor,SpUsage,TextFields" />
+
+    <TextView
+        android:id="@+id/Quit_TextView_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Quit_text4"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/Quit_EditText_email"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/Quit_EditText_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:fontFamily="@font/arial"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:nextFocusDown="@id/Quit_Button_done"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/Quit_TextView_password"
+        tools:ignore="Autofill,LabelFor,SpUsage,TextFields" />
+
+    <TextView
+        android:id="@+id/Quit_TextView_text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Quit_text3"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@id/Quit_Button_done"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/Quit_Button_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/basic_button_unclick"
+        android:clickable="false"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/Quit_quit"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
