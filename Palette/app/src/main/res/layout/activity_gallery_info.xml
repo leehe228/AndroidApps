@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tools:context=".GalleryInfoActivity"
+        android:layout_gravity="center">
+
+    <ImageView
+            android:id="@+id/GalleryInfo_ImageView_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mmin18.widget.RealtimeBlurView
+            android:id="@+id/Main_blurView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            app:realtimeBlurRadius="40dp"
+            app:realtimeOverlayColor="#AE171717" />
+
+    <TextView
+            android:id="@+id/GalleryInfo_TextView_title"
+            android:layout_width="0dp"
+            android:textAlignment="textStart"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/nanumeb"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="28dp"
+            app:layout_constraintStart_toEndOf="@id/GalleryInfo_ImageView_main"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/GalleryInfo_TextView_creator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/nanumr"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:layout_constraintStart_toEndOf="@id/GalleryInfo_ImageView_main"
+            app:layout_constraintTop_toBottomOf="@id/GalleryInfo_TextView_title" />
+
+    <TextView
+            android:id="@+id/GalleryInfo_TextView_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="textStart"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/nanumr"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/GalleryInfo_ImageView_main" />
+
+    <TextView
+            android:id="@+id/GalleryInfo_TextView_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/nanumr"
+            android:textColor="#D6D6D6"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/GalleryInfo_Button_enterVR" />
+
+    <ImageView
+            android:id="@+id/GalleryInfo_ImageView_main"
+            android:layout_width="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+            android:visibility="invisible"
+            android:id="@+id/GalleryInfo_Button_enterVR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/basic_button_darkgray"
+            android:fontFamily="@font/nanumr"
+            android:stateListAnimator="@null"
+            android:text="AR 전시회 입장"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@id/GalleryInfo_Button_enter"
+            tools:ignore="SpUsage" />
+
+    <Button
+            android:id="@+id/GalleryInfo_Button_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/basic_button_darkgray"
+            android:fontFamily="@font/nanumr"
+            android:stateListAnimator="@null"
+            android:text="전시회 입장"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

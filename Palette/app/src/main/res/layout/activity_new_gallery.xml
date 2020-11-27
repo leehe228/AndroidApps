@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NewGalleryActivity"
+        android:background="#000000">
+
+    <ImageView
+            android:id="@+id/Gallery_ImageView_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mmin18.widget.RealtimeBlurView
+            android:id="@+id/Gallery_blurView_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:onClick="onBlurClicked"
+            android:visibility="invisible"
+            app:realtimeBlurRadius="40dp"
+            app:realtimeOverlayColor="#B2292929" />
+
+    <!-- BGM Controller -->
+
+    <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/Gallery_RemoteController2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BGM"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginRight="5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+
+        <ImageButton
+                android:id="@+id/Gallery_ImageButton_BGM"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/start"
+                android:background="#00000000" />
+
+    </LinearLayout>
+
+    <!-- In-gallery Information -->
+
+    <LinearLayout
+            android:id="@+id/Gallery_LinearLayout_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="40dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/Gallery_TextView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:fontFamily="@font/nanumb"
+                android:textColor="#FFFFFF"
+                android:textSize="24dp" />
+
+        <TextView
+                android:id="@+id/Gallery_TextView_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/nanumr"
+                android:lineSpacingExtra="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <!-- Remote Controller -->
+
+    <LinearLayout
+            android:id="@+id/Gallery_RemoteController"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/background_remote_control"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+                android:id="@+id/Gallery_ImageButton_left"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#00000000"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/leftarrow" />
+
+        <ImageButton
+                android:id="@+id/Gallery_ImageButton_plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/plus" />
+
+        <ImageButton
+                android:id="@+id/Gallery_ImageButton_info"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/start" />
+
+        <ImageButton
+                android:id="@+id/Gallery_ImageButton_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/close" />
+
+        <ImageButton
+                android:id="@+id/Gallery_ImageButton_right"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#00000000"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/rightarrow" />
+
+    </LinearLayout>
+
+    <!-- Image View -->
+
+    <ImageView
+            android:id="@+id/Gallery_ImageView_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mmin18.widget.RealtimeBlurView
+            android:id="@+id/Gallery_BlurView_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            app:realtimeBlurRadius="40dp"
+            app:realtimeOverlayColor="#AE171717" />
+
+    <LinearLayout
+            android:id="@+id/Gallery_LinearLayout_Information"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/Gallery_TextView_infoTitle"
+                android:layout_width="match_parent"
+                android:textAlignment="textStart"
+                android:layout_height="wrap_content"
+                android:text="전시회 제목"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/nanumeb"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/Gallery_TextView_infoCreator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="작가  ~2020.11.31."
+                android:fontFamily="@font/nanumr"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/GalleryInfo_TextView_title" />
+
+        <TextView
+                android:id="@+id/Gallery_TextView_infoContent"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textAlignment="textStart"
+                android:layout_marginTop="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/nanumr"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:text="동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전 하세"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/GalleryInfo_TextView_creator" />
+
+        <Space android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        <TextView
+                android:id="@+id/Gallery_TextView_infoCategory"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/nanumr"
+                android:textColor="#D6D6D6"
+                android:text="#AAAA #AAAA #AAAA"
+                android:textSize="18dp" />
+
+        <Button
+                android:id="@+id/Gallery_Button_enterVR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/basic_button_darkgray"
+                android:fontFamily="@font/nanumr"
+                android:stateListAnimator="@null"
+                android:text="AR 전시회 입장"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+
+        <Button
+                android:id="@+id/Gallery_Button_enter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/basic_button_darkgray"
+                android:fontFamily="@font/nanumr"
+                android:stateListAnimator="@null"
+                android:text="전시회 입장"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
