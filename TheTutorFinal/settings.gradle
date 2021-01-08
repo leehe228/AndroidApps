@@ -1,0 +1,3 @@
+include ':ndklib'
+include ':app'
+rootProject.name = "TheTutorFinal"

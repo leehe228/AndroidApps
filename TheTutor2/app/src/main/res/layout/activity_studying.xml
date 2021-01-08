@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudyingActivity"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:id="@+id/statement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#808080"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanumsquarer"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/pauseAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="NX 내에 재시작하지 않으면 공부가 종료됩니다."
+            android:textColor="#808080"
+            android:textSize="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/basic_button_shape"
+            android:padding="15dp"
+            android:layout_margin="20dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textview_totalstudytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#808080"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/nanumsquareeb"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 공부시간"
+                    android:textSize="12dp"
+                    android:textColor="#808080"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/nanumsquarer"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="#808080"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textview_subjecttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#808080"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/nanumsquareeb"/>
+
+                <TextView
+                    android:id="@+id/textview_subjectname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sub_name"
+                    android:textSize="12dp"
+                    android:textColor="#808080"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/nanumsquarer"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="#808080"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textview_lefttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#808080"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/nanumsquareeb"/>
+
+                <TextView
+                    android:id="@+id/textview_studyorrest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쉬는시간까지"
+                    android:textSize="12dp"
+                    android:textColor="#808080"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/nanumsquarer"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_playMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#808080"
+            android:textSize="18dp"
+            android:text="휴대폰 사용하기"
+            android:textAlignment="textStart"
+            android:paddingLeft="20dp"
+            android:background="@drawable/basic_button_shape"
+            android:fontFamily="@font/nanumsquareb"/>
+
+        <Button
+            android:id="@+id/button_pauseandstart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#808080"
+            android:textSize="18dp"
+            android:text="공부 일시정지"
+            android:textAlignment="textStart"
+            android:paddingLeft="20dp"
+            android:background="@drawable/basic_button_shape"
+            android:fontFamily="@font/nanumsquareb"/>
+
+        <Button
+            android:id="@+id/button_exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#808080"
+            android:textSize="18dp"
+            android:text="공부 마치기"
+            android:textAlignment="textStart"
+            android:paddingLeft="20dp"
+            android:background="@drawable/basic_button_shape"
+            android:fontFamily="@font/nanumsquareb"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00FF0000"
+                app:srcCompat="@drawable/backbutton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/nanumsquareeb"
+                android:text="설정"
+                android:textColor="#000000"
+                android:textSize="28dp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="70dp"/>
+
+        <Button
+            android:id="@+id/setting_changeedu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="과목 및 학력 변경"
+            android:textAlignment="textStart"
+            android:paddingLeft="15dp"
+            android:background="#00FF0000"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumsquarer"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/setting_studytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#00FF0000"
+                android:text="공부시간 설정"
+                android:textAlignment="textStart"
+                android:paddingLeft="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/nanumsquarer"
+                android:onClick="mStudyPopOpen"/>
+
+            <TextView
+                android:id="@+id/textview_studytime"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textSize="18dp"
+                android:text="50분"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/setting_resttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#00FF0000"
+                android:text="쉬는시간 설정"
+                android:textAlignment="textStart"
+                android:paddingLeft="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/nanumsquarer"
+                android:onClick="mRestPopOpen"/>
+
+            <TextView
+                android:id="@+id/textview_resttime"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textSize="18dp"
+                android:text="10분"/>
+
+        </LinearLayout>
+<!-- 정기 일정 수정 버튼(지원 예정 기능)
+        <Button
+            android:id="@+id/setting_myplan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#00FF0000"
+            android:text="정기 일정 수정"
+            android:textAlignment="textStart"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumsquarer"/> -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/setting_pushalarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#00FF0000"
+                android:text="푸시알림"
+                android:textAlignment="textStart"
+                android:paddingLeft="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/nanumsquarer"/>
+
+            <TextView
+                android:id="@+id/setting_pushOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="켜짐"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <Button
+            android:id="@+id/setting_changepasswd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#00FF0000"
+            android:text="비밀번호 변경"
+            android:textAlignment="textStart"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumsquarer"/>
+
+        <Button
+            android:id="@+id/setting_dev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#00FF0000"
+            android:text="개발팀"
+            android:textAlignment="textStart"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumsquarer"/>
+
+        <Button
+            android:id="@+id/setting_ask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#00FF0000"
+            android:text="문의하기/피드백 전송"
+            android:textAlignment="textStart"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumsquarer"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <Button
+            android:id="@+id/setting_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#00FF0000"
+            android:text="로그아웃"
+            android:textAlignment="textStart"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:textColor="#333333"
+            android:fontFamily="@font/nanumsquarer"/>
+
+        <Button
+            android:id="@+id/setting_quitmember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#00FF0000"
+            android:text="회원 탈퇴"
+            android:textAlignment="textStart"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:textColor="#E50000"
+            android:fontFamily="@font/nanumsquarer"/>
+
+    </LinearLayout>
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:id="@+id/blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:realtimeBlurRadius="20dp"
+        android:visibility="invisible"
+        app:realtimeOverlayColor="#86FFFFFF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeSubjectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00FF0000"
+                app:srcCompat="@drawable/backbutton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/nanumsquareeb"
+                android:text="학력 및 과목 선택"
+                android:textColor="#000000"
+                android:textSize="28sp"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nanumsquarer"
+            android:text="학력"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Spinner
+            android:id="@+id/spinner_education"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/학력"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/nanumsquarer"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nanumsquarer"
+            android:text="공부하는 과목 선택"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/subject1"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="국어"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/subject2"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="수학"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/subject3"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="사회/역사"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/subject4"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="경제/경영"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/subject5"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="기술/가정"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/subject6"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="영어"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/subject7"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="예술/체육"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/subject8"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="한문/외국어"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/subject9"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="교양"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/subject10"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="기타"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquarer"
+                android:background="@drawable/unpushed_shape"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/button_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:text="다음"
+                android:background="@drawable/basic_button_shape"
+                android:fontFamily="@font/nanumsquarer"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

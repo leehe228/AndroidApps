@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/basic_button"
+        android:gravity="center"
+        android:text="TURN 2"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/Game_TextView_user1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Information -->
+
+    <TextView
+        android:id="@+id/Game_TextView_user2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USER2"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@id/Game_LinearLayout_info2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/Game_LinearLayout_info2"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/basic_button"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/Game_Button_skill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Game_TextView_user2">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Game_TextView_user1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USER1"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@id/Game_LinearLayout_info1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/Game_LinearLayout_info1"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/basic_button"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/Game_Button_skill"
+        app:layout_constraintEnd_toStartOf="@id/Game_LinearLayout_info2"
+        app:layout_constraintTop_toBottomOf="@id/Game_TextView_user1">
+
+
+    </LinearLayout>
+
+    <!-- Buttons -->
+
+    <ImageButton
+        android:id="@+id/Game_Button_attack"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/act_button1" />
+
+    <ImageButton
+        android:id="@+id/Game_Button_skill"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="15dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/Game_Button_attack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/act_button2" />
+
+    <ImageButton
+        android:id="@+id/Game_Button_save"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="15dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Game_Button_attack"
+        app:srcCompat="@drawable/act_button3" />
+
+    <ImageButton
+        android:id="@+id/Game_Button_heal"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/Game_Button_save"
+        app:layout_constraintEnd_toStartOf="@id/Game_Button_skill"
+        app:srcCompat="@drawable/act_button4" />
+
+    <TextView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="x2"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@id/Game_Button_save"
+        app:layout_constraintEnd_toStartOf="@id/Game_Button_skill" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="20dp"
+    tools:context=".AskActivity">
+
+    <LinearLayout
+        android:id="@+id/Ask_LinearLayout_TOP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/Ask_ImageButton_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FF0000"
+            android:contentDescription="@string/Ask_title"
+            app:srcCompat="@drawable/backbutton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nanumsquareb"
+            android:text="@string/Ask_title"
+            android:textColor="#000000"
+            android:textSize="28dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Ask_TextView_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Ask_text1"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Ask_LinearLayout_TOP"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/Ask_EditText_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:maxLines="1"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/Ask_TextView_email"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/Ask_TextView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Ask_text2"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Ask_EditText_email"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/Ask_EditText_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:hint="@string/Ask_titlehint"
+        android:maxLines="1"
+        android:textColor="#000000"
+        android:textColorHint="#B8B8B8"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/Ask_TextView_title"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/Ask_TextView_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Ask_text3"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Ask_EditText_title"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/Ask_EditText_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:gravity="top"
+        android:hint="@string/Ask_contentHint"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:textColor="#000000"
+        android:textColorHint="#B8B8B8"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@id/Ask_Button_done"
+        app:layout_constraintTop_toBottomOf="@id/Ask_TextView_content"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/Ask_TextView_textNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanumsquarer"
+        android:text="@string/Ask_numInit"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/Ask_EditText_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Ask_TextView_content"
+        app:layout_constraintTop_toBottomOf="@id/Ask_EditText_title" />
+
+    <Button
+        android:id="@+id/Ask_Button_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/basic_button_unclick"
+        android:fontFamily="@font/nanumsquarer"
+        android:stateListAnimator="@null"
+        android:text="@string/Ask_send"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

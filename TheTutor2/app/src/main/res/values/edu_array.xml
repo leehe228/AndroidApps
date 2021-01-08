@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="학력">
+
+        <item>미취학</item>
+        <item>유치원/어린이집</item>
+        <item>초등학교 1~3학년</item>
+        <item>초등학교 4~6학년</item>
+        <item>중학생</item>
+        <item>고등학교 1학년</item>
+        <item>고등학교 2학년</item>
+        <item>고등학교 3학년</item>
+        <item>대학생(공대)</item>
+        <item>대학생(자연대)</item>
+        <item>대학생(문과대)</item>
+        <item>대학생(상경대)</item>
+        <item>대학생(예술/체육대)</item>
+        <item>취업준비생</item>
+        <item>공무원시험준비생</item>
+
+    </string-array>
+</resources>

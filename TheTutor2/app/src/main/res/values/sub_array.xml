@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="과목">
+
+        <item>국어</item>
+        <item>수학</item>
+        <item>사회/역사</item>
+        <item>경제/경영</item>
+        <item>기술/가정</item>
+        <item>영어</item>
+        <item>예술/체육</item>
+        <item>한문/외국어</item>
+        <item>교양</item>
+        <item>기타</item>
+
+    </string-array>
+</resources>
